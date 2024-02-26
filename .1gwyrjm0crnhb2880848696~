@@ -1,0 +1,56 @@
+{
+  "hash": "f153eba3",
+  "browserHash": "8764adc2",
+  "optimized": {
+    "react": {
+      "src": "../../react/index.js",
+      "file": "react.js",
+      "fileHash": "626b3bdf",
+      "needsInterop": true
+    },
+    "react/jsx-dev-runtime": {
+      "src": "../../react/jsx-dev-runtime.js",
+      "file": "react_jsx-dev-runtime.js",
+      "fileHash": "7f6b7d36",
+      "needsInterop": true
+    },
+    "react/jsx-runtime": {
+      "src": "../../react/jsx-runtime.js",
+      "file": "react_jsx-runtime.js",
+      "fileHash": "7b7d4341",
+      "needsInterop": true
+    },
+    "react-dom/client": {
+      "src": "../../react-dom/client.js",
+      "file": "react-dom_client.js",
+      "fileHash": "a3d9cf1e",
+      "needsInterop": true
+    },
+    "react-bootstrap": {
+      "src": "../../react-bootstrap/esm/index.js",
+      "file": "react-bootstrap.js",
+      "fileHash": "9b591042",
+      "needsInterop": false
+    },
+    "axios": {
+      "src": "../../axios/index.js",
+      "file": "axios.js",
+      "fileHash": "d8c12cff",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "chunk-X3B7SAOS": {
+      "file": "chunk-X3B7SAOS.js"
+    },
+    "chunk-UFCMWVQY": {
+      "file": "chunk-UFCMWVQY.js"
+    },
+    "chunk-RDZYK52F": {
+      "file": "chunk-RDZYK52F.js"
+    },
+    "chunk-5WWUZCGV": {
+      "file": "chunk-5WWUZCGV.js"
+    }
+  }
+}
