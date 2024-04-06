@@ -1,4 +1,4 @@
-import { Button } from 'react-bootstrap';
+import { Button, Col } from 'react-bootstrap';
 import IconButton from '../components/iconButton';
 import NewPostModal from '../components/newPostModal';
 
@@ -9,7 +9,11 @@ const clearLocalStorage = () => {
 
 export default function SideBar() {
   return (
-    <div className='me-3' style={{ display: "flex", flexDirection: "column", width: "20%", justifyContent: 'left', alignItems: "left" }}>
+    <Col
+      sm={2}
+      className="d-flex flex-column justify-content-start align-items-start bg-light vh-100"
+      style={{ position: "sticky", top: 0 }}
+    >
       <IconButton className="bi bi-twitter" isTop />
       <IconButton className="bi bi-house" text="Home" />
       <IconButton className="bi bi-search" text="Explore" />
@@ -24,7 +28,7 @@ export default function SideBar() {
 
       {/* <Button variant="primary" className="rounded-pill me-3">Tweet</Button> */}
       <NewPostModal variant="primary" className="rounded-pill me-3" text="Tweet" />
-    </div >
-
+      {/* </div > */}
+    </Col>
   )
 }

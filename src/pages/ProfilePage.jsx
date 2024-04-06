@@ -15,6 +15,8 @@ export default function ProfilePage() {
   useEffect(() => {
     if (!authToken) {
       navigate("/login");
+    } else if (authToken) {
+      navigate("/profile")
     }
   }, [authToken, navigate]);
 
@@ -34,7 +36,7 @@ export default function ProfilePage() {
       </div>
 
       <div style={{ display: "flex" }}>
-         <SideBar />
+        <SideBar />
         <div>
           <MidBody />
           <PostCard />

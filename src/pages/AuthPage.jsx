@@ -2,6 +2,7 @@ import { Col, Image, Row, Button, Modal, Form } from "react-bootstrap";
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import useLocalStorage from "use-local-storage";
+import { useNavigate } from "react-router-dom";
 
 
 export default function AuthPage() {
@@ -15,8 +16,14 @@ export default function AuthPage() {
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const [authToken, setAuthToken] = useLocalStorage("authToken", "");
+  const navigate = useNavigate();
 
-// asdsd
+
+  useEffect(() => {
+    if (authToken) {
+      navigate("/profile");
+    }
+  }, [authToken, navigate]);
 
   //for sign up
   const handleSignUp = async (e) => {
@@ -101,9 +108,6 @@ export default function AuthPage() {
             {modalShow === "SignUp" ? "Create your account" : "Sign in"}
           </Button>
           <p style={{ fontSize: "12px" }}> Agree to terms</p>
-          <p className="mt-5" style={{ fontSize: 64 }}> Happening Now</p>
-
-
           <Modal
             is
             show={modalShow !== null}
@@ -131,7 +135,7 @@ export default function AuthPage() {
 
                 <Form.Group className="mb-3" controlId="formBasicPassword">
                   <Form.Label>Password</Form.Label>
-                  <Form.Control onChange={(e) => setPassword(e.target.value)} type="password" placeholder="Enter password" />
+                  <Form.Control onChange={(e) => setPassword(e.target.value)} type="text" placeholder="Enter password" />
                 </Form.Group>
                 <p style={{ fontSize: "12px" }}>
                   By signing up, you agree to the Term of Service and Privacy Policy, including Cookie Use, SigmaTweets may use your contact information, including your email address and phone number for purposes outline in our Privacy Policy, like keeping your account secure and personalising our services, including ads. Learn more. Other will be able to find you by email or phone number, when provided, unless you choose otherwise here.
